@@ -38,6 +38,15 @@ namespace Api.Controllers
             return await aplicCustomer.Get();
         }
 
+        [HttpGet]
+        [Route("byCpf/{cpf}")]
+        public async Task<ActionResult<List<CustomerView>>> GetByCpf(
+            [FromServices] IAplicCustomer aplicCustomer,
+            string cpf)
+        {
+            return await aplicCustomer.GetByCpf(cpf);
+        }
+
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<ActionResult<CustomerView>> Delete(

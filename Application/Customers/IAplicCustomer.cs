@@ -12,6 +12,7 @@ namespace Application.Customers
         Task<CustomerView> Insert(CustomerDto dto);
         Task<CustomerView> Update(int id, CustomerDto dto);
         Task<List<CustomerView>> Get();
+        Task<List<CustomerView>> GetByCpf(string cpf);
         Task<CustomerView> Delete(int id);
     }
 }

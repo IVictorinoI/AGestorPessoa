@@ -20,13 +20,13 @@ namespace Application.Config
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "A Gestor Pessoa API",
+                    Title = "A - Gestor Pessoa API",
                     Description = "A aplication for people",
                     TermsOfService = new Uri("https://github.com/IVictorinoI/"),
                     Contact = new OpenApiContact
                     {
                         Name = "Victor Matheus Mendes",
-                        Email = string.Empty,
+                        Email = "victormatheusmendes@hotmail.com",
                         Url = new Uri("https://github.com/IVictorinoI/"),
                     },
                     License = new OpenApiLicense

@@ -1,5 +1,3 @@
- 
-
 CREATE DATABASE AGestorPessoa;
 
 CREATE TABLE "AppUser" (
@@ -8,8 +6,6 @@ CREATE TABLE "AppUser" (
 	"Email" VARCHAR ( 255 ) NOT NULL,
 	"Password" VARCHAR ( 50 ) NOT NULL
 );
-
-
 
 CREATE TABLE "Customer" (
 	"Id" SERIAL PRIMARY KEY,

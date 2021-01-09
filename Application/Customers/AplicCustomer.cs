@@ -59,6 +59,16 @@ namespace Application.Customers
             return regs.Select(CustomerView.New).ToList();
         }
 
+        public async Task<List<CustomerView>> GetByCpf(string cpf)
+        {
+            var regs = await Context.Customers
+                .Where(p => p.Cpf == cpf)
+                .AsNoTracking()
+                .ToListAsync();
+
+            return regs.Select(CustomerView.New).ToList();
+        }
+
         public async Task<CustomerView> Delete(int id)
         {
             var reg = await Context.Customers.FirstOrDefaultAsync(p => p.Id == id);
