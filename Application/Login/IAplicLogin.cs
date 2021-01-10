@@ -7,5 +7,6 @@ namespace Application.Login
     public interface IAplicLogin
     {
         Task<LoginView> Login(LoginDto dto);
+        Task<LoginView> ExternalAuthentication(ExternalAuthenticationDto dto);
     }
 }

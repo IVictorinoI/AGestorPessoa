@@ -23,6 +23,13 @@ namespace Api.Controllers
             return await aplicLogin.Login(dto);
         }
 
+        [HttpPost("ExternalAuthentication")]
+        [AllowAnonymous]
+        public async Task<ActionResult<LoginView>> ExternalAuthentication([FromServices] IAplicLogin aplicLogin, [FromBody] ExternalAuthenticationDto dto)
+        {
+            return await aplicLogin.ExternalAuthentication(dto);
+        }
+
         [HttpPost("SignIn")]
         [AllowAnonymous]
         public async Task<ActionResult<LoginView>> SignIn([FromServices] IAplicLogin aplicLogin, [FromServices] IAplicUser aplicUser, [FromBody] UserDto dto)

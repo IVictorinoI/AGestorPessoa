@@ -22,7 +22,7 @@ namespace Application.Login.Config
                     new Claim(ClaimTypes.Role, user.GetRole()),
                     new Claim("Id", user.Id.ToString()), 
                 }),
-                Expires = DateTime.UtcNow.AddHours(48),
+                Expires = DateTime.UtcNow.AddHours(720),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

@@ -34,5 +34,20 @@ namespace Application.Login
                 User = UserView.New(reg)
             };
         }
+
+        public async Task<LoginView> ExternalAuthentication(ExternalAuthenticationDto dto)
+        {
+            //Aqui deveria buscar um usuário para o clientId e clientSecret informados.
+            var reg = await Context.Users.FirstOrDefaultAsync();
+
+            var token = TokenService.GenerateToken(reg);
+
+            return new LoginView()
+            {
+                Token = token,
+                User = UserView.New(reg)
+            };
+        }
+
     }
 }
