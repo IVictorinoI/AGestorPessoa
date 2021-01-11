@@ -1,11 +1,11 @@
 # A - Gestor Pessoa API
-A aplication for people
+**AspNetCore, PostgreeSQL**
 
 ## Resumo
 - Responsável pelo cadastro da pessoa e relação de dividas. 
 - Sistema com banco de dados relacional. 
 - Autenticação JWT 
-- Ao criar/alterar cliente, notifica os interessados ([Sistema B](https://github.com/IVictorinoI/BGestorRendaBem/) e [Sistema C](https://github.com/IVictorinoI/CExtrato/) com RabbitMQ) 
+- Ao criar/alterar cliente, notifica os interessados ([Sistema B](https://github.com/IVictorinoI/BGestorRendaBem/) e [Sistema C](https://github.com/IVictorinoI/CExtrato/) com RabbitMQ) (Implementação futura)
 - Sistema mais robusto com Domain, Application e Api, usando validadores, Dtos e Views, Interfaces, etc. 
 - Sistema não expoe o seu domínio, todas as informações são trafegadas por Dtos e Views e passsam por validadores para manter a consistencia das informações.
 - A API possui swagger.
